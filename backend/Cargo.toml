@@ -1,0 +1,25 @@
+[package]
+name = "backend"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# another web framework for multithreading/async processing
+tokio = { version = "1.17.0", features = ["macros", "rt-multi-thread"] }
+# web framework
+warp = "0.3.2"
+# database
+mobc = "0.7.3"
+# db:postgre
+mobc-postgres = { version = "=0.7.0", features = ["with-chrono-0_4", "with-serde_json-1"] }
+# serializer/desearilizer
+serde = { version = "1.0.136", features = ["derive"] }
+# serializer to json
+serde_json = "1.0.79"
+# std::error traits
+thiserror = "1.0.30"
+# datetime
+chrono = { version = "0.4", features = ["serde"] }
+
+# reusage of shared packages
+shared = { version = "0.1.0", path = "../shared" }

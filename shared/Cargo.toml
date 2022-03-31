@@ -1,0 +1,10 @@
+[package]
+name = "shared"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# serializer/desearilizer
+serde = { version = "1.0.136", features = ["derive"] }
+# datetime
+chrono = { version = "0.4", features = ["serde"] }
